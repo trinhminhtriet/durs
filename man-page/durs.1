@@ -1,0 +1,134 @@
+.ie \n(.g .ds Aq \(aq
+.el .ds Aq '
+.TH Durs 1  "Durs 0.1.1" 
+.SH NAME
+Durs \- Like du but more intuitive
+.SH SYNOPSIS
+\fBdurs\fR [\fB\-d\fR|\fB\-\-depth\fR] [\fB\-T\fR|\fB\-\-threads\fR] [\fB\-n\fR|\fB\-\-number\-of\-lines\fR] [\fB\-p\fR|\fB\-\-full\-paths\fR] [\fB\-X\fR|\fB\-\-ignore\-directory\fR] [\fB\-I\fR|\fB\-\-ignore\-all\-in\-file\fR] [\fB\-L\fR|\fB\-\-dereference\-links\fR] [\fB\-x\fR|\fB\-\-limit\-filesystem\fR] [\fB\-s\fR|\fB\-\-apparent\-size\fR] [\fB\-r\fR|\fB\-\-reverse\fR] [\fB\-c\fR|\fB\-\-no\-colors\fR] [\fB\-C\fR|\fB\-\-force\-colors\fR] [\fB\-b\fR|\fB\-\-no\-percent\-bars\fR] [\fB\-B\fR|\fB\-\-bars\-on\-right\fR] [\fB\-z\fR|\fB\-\-min\-size\fR] [\fB\-R\fR|\fB\-\-screen\-reader\fR] [\fB\-\-skip\-total\fR] [\fB\-f\fR|\fB\-\-filecount\fR] [\fB\-i\fR|\fB\-\-ignore_hidden\fR] [\fB\-v\fR|\fB\-\-invert\-filter\fR] [\fB\-e\fR|\fB\-\-filter\fR] [\fB\-t\fR|\fB\-\-file_types\fR] [\fB\-w\fR|\fB\-\-terminal_width\fR] [\fB\-P\fR|\fB\-\-no\-progress\fR] [\fB\-\-print\-errors\fR] [\fB\-D\fR|\fB\-\-only\-dir\fR] [\fB\-F\fR|\fB\-\-only\-file\fR] [\fB\-o\fR|\fB\-\-output\-format\fR] [\fB\-S\fR|\fB\-\-stack\-size\fR] [\fB\-j\fR|\fB\-\-output\-json\fR] [\fB\-M\fR|\fB\-\-mtime\fR] [\fB\-A\fR|\fB\-\-atime\fR] [\fB\-y\fR|\fB\-\-ctime\fR] [\fB\-\-files0\-from\fR] [\fB\-m\fR|\fB\-\-filetime\fR] [\fB\-h\fR|\fB\-\-help\fR] [\fB\-V\fR|\fB\-\-version\fR] [\fIPATH\fR] 
+.SH DESCRIPTION
+Like du but more intuitive
+.SH OPTIONS
+.TP
+\fB\-d\fR, \fB\-\-depth\fR=\fIDEPTH\fR
+Depth to show
+.TP
+\fB\-T\fR, \fB\-\-threads\fR
+Number of threads to use
+.TP
+\fB\-n\fR, \fB\-\-number\-of\-lines\fR=\fINUMBER\fR
+Number of lines of output to show. (Default is terminal_height \- 10)
+.TP
+\fB\-p\fR, \fB\-\-full\-paths\fR
+Subdirectories will not have their path shortened
+.TP
+\fB\-X\fR, \fB\-\-ignore\-directory\fR=\fIPATH\fR
+Exclude any file or directory with this name
+.TP
+\fB\-I\fR, \fB\-\-ignore\-all\-in\-file\fR=\fIFILE\fR
+Exclude any file or directory with a regex matching that listed in this file, the file entries will be added to the ignore regexs provided by \-\-invert_filter
+.TP
+\fB\-L\fR, \fB\-\-dereference\-links\fR
+dereference sym links \- Treat sym links as directories and go into them
+.TP
+\fB\-x\fR, \fB\-\-limit\-filesystem\fR
+Only count the files and directories on the same filesystem as the supplied directory
+.TP
+\fB\-s\fR, \fB\-\-apparent\-size\fR
+Use file length instead of blocks
+.TP
+\fB\-r\fR, \fB\-\-reverse\fR
+Print tree upside down (biggest highest)
+.TP
+\fB\-c\fR, \fB\-\-no\-colors\fR
+No colors will be printed (Useful for commands like: watch)
+.TP
+\fB\-C\fR, \fB\-\-force\-colors\fR
+Force colors print
+.TP
+\fB\-b\fR, \fB\-\-no\-percent\-bars\fR
+No percent bars or percentages will be displayed
+.TP
+\fB\-B\fR, \fB\-\-bars\-on\-right\fR
+percent bars moved to right side of screen
+.TP
+\fB\-z\fR, \fB\-\-min\-size\fR=\fIMIN_SIZE\fR
+Minimum size file to include in output
+.TP
+\fB\-R\fR, \fB\-\-screen\-reader\fR
+For screen readers. Removes bars. Adds new column: depth level (May want to use \-p too for full path)
+.TP
+\fB\-\-skip\-total\fR
+No total row will be displayed
+.TP
+\fB\-f\fR, \fB\-\-filecount\fR
+Directory \*(Aqsize\*(Aq is number of child files instead of disk size
+.TP
+\fB\-i\fR, \fB\-\-ignore_hidden\fR
+Do not display hidden files
+.TP
+\fB\-v\fR, \fB\-\-invert\-filter\fR=\fIREGEX\fR
+Exclude filepaths matching this regex. To ignore png files type: \-v "\\.png$" 
+.TP
+\fB\-e\fR, \fB\-\-filter\fR=\fIREGEX\fR
+Only include filepaths matching this regex. For png files type: \-e "\\.png$" 
+.TP
+\fB\-t\fR, \fB\-\-file_types\fR
+show only these file types
+.TP
+\fB\-w\fR, \fB\-\-terminal_width\fR=\fIWIDTH\fR
+Specify width of output overriding the auto detection of terminal width
+.TP
+\fB\-P\fR, \fB\-\-no\-progress\fR
+Disable the progress indication.
+.TP
+\fB\-\-print\-errors\fR
+Print path with errors.
+.TP
+\fB\-D\fR, \fB\-\-only\-dir\fR
+Only directories will be displayed.
+.TP
+\fB\-F\fR, \fB\-\-only\-file\fR
+Only files will be displayed. (Finds your largest files)
+.TP
+\fB\-o\fR, \fB\-\-output\-format\fR=\fIFORMAT\fR
+Changes output display size. si will print sizes in powers of 1000. b k m g t kb mb gb tb will print the whole tree in that size.
+.br
+
+.br
+[\fIpossible values: \fRsi, b, k, m, g, t, kb, mb, gb, tb]
+.TP
+\fB\-S\fR, \fB\-\-stack\-size\fR=\fISTACK_SIZE\fR
+Specify memory to use as stack size \- use if you see: \*(Aqfatal runtime error: stack overflow\*(Aq (default low memory=1048576, high memory=1073741824)
+.TP
+\fB\-j\fR, \fB\-\-output\-json\fR
+Output the directory tree as json to the current directory
+.TP
+\fB\-M\fR, \fB\-\-mtime\fR
++/\-n matches files modified more/less than n days ago , and n matches files modified exactly n days ago, days are rounded down.That is +n => (−∞, curr−(n+1)), n => [curr−(n+1), curr−n), and \-n => (𝑐𝑢𝑟𝑟−𝑛, +∞)
+.TP
+\fB\-A\fR, \fB\-\-atime\fR
+just like \-mtime, but based on file access time
+.TP
+\fB\-y\fR, \fB\-\-ctime\fR
+just like \-mtime, but based on file change time
+.TP
+\fB\-\-files0\-from\fR
+run durs on NUL\-terminated file names specified in file; if argument is \-, then read names from standard input
+.TP
+\fB\-m\fR, \fB\-\-filetime\fR
+Directory \*(Aqsize\*(Aq is max filetime of child files instead of disk size. while a/c/m for last accessed/changed/modified time
+.br
+
+.br
+[\fIpossible values: \fRa, c, m]
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Print help
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+Print version
+.TP
+[\fIPATH\fR]
+
+.SH VERSION
+v0.1.1
