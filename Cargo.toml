@@ -1,7 +1,7 @@
 [package]
 name = "durs"
 description = "Durs: A fast, intuitive disk usage analyzer in Rust. Quickly assess file system space with efficient, clear visualizations and insights."
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Triet Trinh <contact@trinhminhtriet.com>"]
 edition = "2021"
 readme = "README.md"
