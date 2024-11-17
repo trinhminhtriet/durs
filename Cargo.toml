@@ -25,7 +25,7 @@ strip = true
 
 [dependencies]
 ansi_term = "0.12"
-clap = "4.4"
+clap = "4.5"
 lscolors = "0.13"
 terminal_size = "0.2"
 unicode-width = "0.1"
@@ -53,7 +53,7 @@ assert_cmd = "2"
 tempfile = "=3"
 
 [build-dependencies]
-clap = "4.4"
+clap = "4.5"
 clap_complete = "4.4"
 clap_mangen = "0.2"
 
