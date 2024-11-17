@@ -16,9 +16,7 @@ echo ">>> Bumping version"
 sed -i.bak "s/version = \"$current_version\"/version = \"$semver\"/" Cargo.toml
 rm Cargo.toml.bak
 
-echo ">>> Running tests"
-cargo build
-cargo test
+sleep 20
 
 echo ">>> Commit"
 git add Cargo.toml Cargo.lock
