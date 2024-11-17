@@ -20,7 +20,7 @@ cargo build
 cargo test
 
 echo ">>> Commit"
-git add Cargo.toml
+git add Cargo.toml Cargo.lock
 git commit -am "version $new_version"
 git tag $new_version
 
