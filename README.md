@@ -12,7 +12,7 @@
 
 ## Demo
 
-![Screenshot](media/screenshot.png)
+![durs](media/demo.gif)
 
 ## ✨ Features
 
