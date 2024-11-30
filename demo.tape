@@ -14,7 +14,7 @@ Sleep 50ms
 Enter
 Sleep 100ms
 
-Type@450ms "durs ~/project/triet/trinhminhtriet"
+Type@150ms "durs ~/project/triet/trinhminhtriet"
 Sleep 100ms
 Enter
 Sleep 20s
