@@ -32,6 +32,7 @@ cd durs
 
 cargo build --release
 cp ./target/release/durs /usr/local/bin/
+durs --version
 ```
 
 Running the below command will globally install the `durs` binary.

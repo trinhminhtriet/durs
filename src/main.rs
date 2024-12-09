@@ -28,7 +28,7 @@ use std::sync::atomic::AtomicBool;
 use std::sync::atomic::Ordering;
 use std::sync::Arc;
 use std::sync::Mutex;
-use sysinfo::{System, SystemExt};
+use sysinfo::System;
 
 use self::display::draw_it;
 use config::get_config;
