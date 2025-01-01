@@ -42,7 +42,7 @@ ctrlc = "3.4"
 chrono = "0.4"
 
 [target.'cfg(not(target_has_atomic = "64"))'.dependencies]
-portable-atomic = "1.4"
+portable-atomic = "1.10"
 
 [target.'cfg(windows)'.dependencies]
 winapi-util = "0.1"
