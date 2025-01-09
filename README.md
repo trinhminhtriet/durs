@@ -41,6 +41,14 @@ Running the below command will globally install the `durs` binary.
 cargo install durs
 ```
 
+### NetBSD
+
+On NetBSD, a package is available from the official repositories. To install it, simply run:
+
+```bash
+# pkgin install durs
+```
+
 ## 💡 Usage
 
 ```
